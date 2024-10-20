@@ -1,6 +1,4 @@
-import React from "react";
-
-const Logo = () => {
+const index = () => {
   return (
     <div className="flex justify-center font-poppins tracking-wide text-primary text-4xl">
           <span className="font-bold ">FINE</span>bank
@@ -9,4 +7,4 @@ const Logo = () => {
   );
 };
 
-export default Logo
+export default index

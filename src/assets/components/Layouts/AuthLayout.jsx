@@ -1,10 +1,10 @@
-import React from "react";
 import { Children } from "react";
-import Logo from "../Elements/Logo/Index";
+import Logo from "../Elements/Logo";
 import FormSignIn from "../Fragments/FormSignIn";
+import { Link } from "react-router-dom";
 
 const AuthLayout = (props) => {
-const { Children } = props;
+const { children, type } = props;
 
   return (
     <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
@@ -14,7 +14,7 @@ const { Children } = props;
         <Logo/>
         {/* logo end */}
         {/* form start */}
-        <div className="mt-16">{Children}</div>
+        <div className="mt-16">{children}</div>
         {/* form end */}
         {/* teks start */}
         <div className="my-9 px-7 flex justify-center text-xs text-gray-03 items-center flex-col static">
@@ -90,9 +90,18 @@ const { Children } = props;
         </div>
         {/* sign in with google end */}
         {/* link start */}
-        <div className="flex justify-center">
-          <a className="text-primary text-sm font-bold">Create an account</a>
-        </div>
+          <div className="flex justify-center">
+            {type == "sign up" ? (
+              <>
+                <span className="text-sm text-gray-03">
+                  Already have an account?&nbsp;
+                </span>
+                <Link to="/login" className="text-primary text-sm font-bold">Sign In Here</Link>
+              </>
+            ) : (
+              <Link to="/register" className="text-primary text-sm font-bold">Create an account</Link>
+            )}
+          </div>
         {/* link end */}
       </div>
       {/* container end */}
@@ -100,4 +109,4 @@ const { Children } = props;
   );
 };
 
-export default AuthLayout
+export default AuthLayout;  

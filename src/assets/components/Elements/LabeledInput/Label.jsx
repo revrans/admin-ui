@@ -1,5 +1,3 @@
-import React from "react";
-
 const Label = (props) => {
     const { htmlFor, children } = props;
   

@@ -1,5 +1,3 @@
-import React from "react";
-
 const CheckBox = (props) => {
   
     const { label, name } = props;

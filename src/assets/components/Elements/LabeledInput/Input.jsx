@@ -1,16 +1,15 @@
-import React from "react";
-import Input from "./Input";
-import Label from "./Label";
-
-const LabeledInput = (props) => {
-  const { label, name, type, placeholder } = props;
+const Input = (props) => {
+  const { type, placeholder, name } = props;
 
   return (
-    <>
-      <Label htmlFor={name}>{label}</Label>
-      <Input name={name} type={type} placeholder={placeholder} />
-    </>
+    <input
+      type={type}
+      className="py-3 ps-4 text-sm border rounded-md w-full bg-special-mainBg border-gray-03 text-gray-01 focus:border-black focus:outline-none focus:ring-0"
+      placeholder={placeholder}
+      name={name}
+      id={name}
+    />
   );
 };
 
-export default LabeledInput;
+export default Input;
