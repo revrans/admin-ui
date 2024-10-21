@@ -99,7 +99,10 @@ const { children, type } = props;
                 <Link to="/login" className="text-primary text-sm font-bold">Sign In Here</Link>
               </>
             ) : (
-              <Link to="/register" className="text-primary text-sm font-bold">Create an account</Link>
+              <>
+                <Link to="/register" className="text-primary text-sm font-bold">Create an account</Link>
+                <Link to="/forgotpass" className="text-secondary text-sm font-bold">Forgot Password</Link>
+              </>
             )}
           </div>
         {/* link end */}
