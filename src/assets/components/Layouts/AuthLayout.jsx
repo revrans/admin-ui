@@ -2,6 +2,7 @@ import { Children } from "react";
 import Logo from "../Elements/Logo";
 import FormSignIn from "../Fragments/FormSignIn";
 import { Link } from "react-router-dom";
+import Button from "../Elements/Button";
 
 const AuthLayout = (props) => {
 const { children, type } = props;
@@ -101,6 +102,7 @@ const { children, type } = props;
             ) : (
               <>
                 <Link to="/register" className="text-primary text-sm font-bold">Create an account</Link>
+                <br></br>
                 <Link to="/forgotpass" className="text-secondary text-sm font-bold">Forgot Password</Link>
               </>
             )}
