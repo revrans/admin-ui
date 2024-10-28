@@ -1,17 +1,17 @@
+import SignInPage from "./pages/signmasuk";
+import SignUpPage from "./pages/signdaftar";
+import ErrorRoute from "./pages/errorRoute";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SignInPage from "./assets/pages/signIn";
-import SignUpPage from "./assets/pages/signUp";
-import ForgotPassPage from "./assets/pages/forgotPass";
-import ErrorRoute from "./assets/pages/errorRoute";
-import DashboardPage from "./assets/pages/Dashboard";
-import BalancePage from "./assets/pages/balance";
+import ForgotpwPage from "./pages/forgotpw";
+import DashboardPage from "./pages/dashboard";
+import BalancePage from "./pages/balance";
 
-
+// up
 const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
-      element: <DashboardPage/>,
+      element: <DashboardPage />,
       errorElement: <ErrorRoute />,
     },
     {
@@ -23,13 +23,13 @@ const App = () => {
       element: <SignUpPage />,
     },
     {
-      path: "/forgotpass",
-      element: <ForgotPassPage />,
+      path: "/forgotpw",
+      element: <ForgotpwPage />,
     },
     {
       path: "/balance",
-      element: <BalancePage/>,
-    }
+      element: <BalancePage />,
+    },
   ]);
 
   return (
