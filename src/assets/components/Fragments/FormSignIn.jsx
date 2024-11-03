@@ -6,7 +6,7 @@ const FormSignIn = () => {
     return (
             <form action="">
               <div className="mb-6">
-                <LabeledInput 
+                <LabeledInput
                   label="Email address"
                   type="email"
                   placeholder="hello@example.com"
