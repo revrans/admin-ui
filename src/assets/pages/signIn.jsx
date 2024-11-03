@@ -4,7 +4,7 @@ import Authlayout from "../components/Layouts/Authlayout";
 const SignInPage = () => {
   return (
     <Authlayout type="sign in">
-      <FormSignIn />
+      <FormSignIn/>
     </Authlayout>
   );
 };
