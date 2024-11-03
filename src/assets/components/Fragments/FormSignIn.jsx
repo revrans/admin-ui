@@ -1,6 +1,6 @@
-import LabeledInput from "../Elements/LabeledInput"
 import Button from "../Elements/Button"
 import CheckBox from "../Elements/CheckBox"
+import LabeledInput from "../Elements/LabeledInput"
 
 const FormSignIn = () => {
     return (
@@ -14,7 +14,7 @@ const FormSignIn = () => {
                 />
               </div>
               <div className="mb-6">
-                <LabeledInput 
+                <LabeledInput
                   label="Password"
                   type="password"
                   placeholder="*************"
@@ -34,7 +34,7 @@ const FormSignIn = () => {
                 />
               </div> */}
               <div className="mb-3">
-                <CheckBox />
+                <CheckBox/>
               </div>
               <Button variant="bg-primary w-full text-white" type="submit"> Login </Button>
             </form>
