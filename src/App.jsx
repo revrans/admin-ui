@@ -3,7 +3,7 @@ import SignInPage from "./assets/pages/signIn";
 import SignUpPage from "./assets/pages/signUp";
 import ForgotPassPage from "./assets/pages/forgotPass";
 import ErrorRoute from "./assets/pages/errorRoute";
-import DashboardPage from "./assets/pages/Dashboard";
+import DashboardPage from "./assets/pages/dashboard";
 import BalancePage from "./assets/pages/balance";
 
 
