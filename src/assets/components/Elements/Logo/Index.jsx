@@ -1,4 +1,4 @@
-const index = () => {
+const Logo = () => {
   return (
     <div className="flex justify-center font-poppins tracking-wide text-primary text-4xl">
           <span className="font-bold ">FINE</span>bank
@@ -7,4 +7,4 @@ const index = () => {
   );
 };
 
-export default index
+export default Logo
