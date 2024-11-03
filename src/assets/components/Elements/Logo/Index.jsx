@@ -1,5 +1,5 @@
 
-const Logo = () => {
+const Logo = (props) => {
   return (
     <div className="flex justify-center font-poppins tracking-wide text-primary text-4xl">
           <span className="font-bold ">FINE</span>bank
