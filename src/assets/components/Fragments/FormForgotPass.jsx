@@ -1,7 +1,8 @@
-import Logo from "../Elements/Logo"
+
 import LabeledInput from "../Elements/LabeledInput"
 import Button from "../Elements/Button"
-import { Link } from "react-router-dom";    
+import { Link } from "react-router-dom"; 
+import Logo from "../Elements/Logo"   
 
 const FormForgotPass = () => {
   return (
