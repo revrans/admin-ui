@@ -6,38 +6,19 @@ import CardExpenses2 from "../component/Elements/CardExpenses2";
 const ExpensesPage = () => {
     return (
         <MainLayout type="expenses">
-        <h1 className="text-gray-500 text-2xl mb-4">Expenses Comparison</h1>
-          {/* top content start*/}
-          <div className="mb-8 sm:flex sm:gap-6">
-              <CardExpenses />
-            </div>                                      
-          {/* top content end*/}
-          <h1 className="text-gray-500 text-2xl mb-4">Expenses Breakdown</h1>
-          {/* bottom content start*/}
-          <div className="mb-8 sm:flex sm:gap-6">
-            <div className="sm:w-1/3">
-            <CardExpenses2/>  
-            </div>
-            <div className="sm:w-1/3">
-              <CardExpenses />
-            </div>
-            <div className="sm:w-1/3">
-              <CardExpenses2 />
-            </div>
-          </div>
-            <div className="mb-8 sm:flex sm:gap-6">
-              <div className="sm:w-1/3">
-                <CardExpenses2 />
-              </div>
-              <div className="sm:w-1/3">
-                <CardExpenses2 />
-              </div>
-              <div className="sm:w-1/3">
-                <CardExpenses />
-              </div>
-            </div>
-    
-          {/* bottom content end*/}
+        <div className="">
+        <h1 className="text-1g text-gray-02 mb-4">Expenses Comparison</h1>
+        <Card title="" desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae voluptatum pariatur voluptatem tempora eos dicta est sapiente nesciunt natus, sint dolore ea cum aut nostrum voluptate? Eos, velit a." />
+        </div>
+        <h1 className="text-1g text-gray-02 mb-4">Expenses Breakdown</h1>
+        <div className="md:grid md:grid-cols-3 md:gap-x-6 ">
+        <Card title="" desc=""/>
+        <Card title="" desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae voluptatum pariatur voluptatem tempora eos dicta est sapiente nesciunt natus, sint dolore ea cum aut nostrum voluptate? Eos, velit a." />
+        <Card title="" desc=""/>
+        <Card title="" desc=""/>
+        <Card title="" desc=""/>
+        <Card title="" desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae voluptatum pariatur voluptatem tempora eos dicta est sapiente nesciunt natus, sint dolore ea cum aut nostrum voluptate? Eos, velit a." />
+        </div>
         </MainLayout>
       );
     };
