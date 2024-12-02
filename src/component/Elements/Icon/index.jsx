@@ -177,6 +177,16 @@ const OthersIcon = () => (
   </IconWrapper>
 );
 
+const ArrowUpRightIcon = () => (
+  <IconWrapper>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.6665 11.3337L11.3332 4.66699" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.6665 4.66699H11.3332V11.3337" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  </IconWrapper>
+)
+
 export const Icon = {
   Overview: OverviewIcon,
   Balance: BalanceIcon,
@@ -189,6 +199,7 @@ export const Icon = {
   ArrowUp: ArrowUpIcon,
   ArrowRight: ArrowRightIcon,
   ArrowDown: ArrowDownIcon,
+  ArrowUpRight: ArrowUpRightIcon,
   Transportation: TransportationIcon,
   Housing: HousingIcon,
   Titik: TitikIcon,
