@@ -2,7 +2,7 @@ const Card = (props) => {
 const { title = false, desc, variant } = props;
 
   return (
-    <div className={'flex flex-col flex-1 mb-6 ${variant}'}>
+    <div className={`flex flex-col flex-1 mb-6 ${variant}`}>
       {title && (
         <>
           {title.length == 1 ? (
