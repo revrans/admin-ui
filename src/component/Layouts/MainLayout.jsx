@@ -13,7 +13,7 @@ const MainLayout = (props) => {
   const { msg, setMsg, open, setOpen, isLoading, setIsLoading } = useContext(NotifContext);
 
   return (
-    <div className={"flex bg-special-mainBg w-screen min-h-screen max-w-full"}>
+    <div className={`flex bg-special-mainBg w-screen min-h-screen max-w-full ${theme.name}`}>
       {/* navbar start*/}
       <Navbar />
       {/* navbar end*/}

@@ -17,7 +17,7 @@ const { title = false, desc, variant } = props;
           {desc}
           </div>
           </div>
-    );
+      );
     };
     
 export default Card;
