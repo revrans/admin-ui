@@ -9,11 +9,13 @@ import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import { NotifContext } from "../../context/notifContext";
+import { useState } from "react";
 
 const FormSignIn = () => {
   // const [msg, setMsg] = useState("");
   // const [open, setOpen] = useState(true);
   // const { setIsLoggedIn, setName } = useContext(AuthContext);
+
   const { msg, setMsg, setOpen, setIsLoading } = useContext(NotifContext);
   const { setIsLoggedIn, setName } = useContext(AuthContext);
 
@@ -133,7 +135,7 @@ const FormSignIn = () => {
           setOpen={setOpen}
         />
       )}
-    </form>
+    </form>    
   )
 }
 

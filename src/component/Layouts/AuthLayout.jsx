@@ -7,13 +7,18 @@ import { NotifContext } from "../../context/notifContext";
 import SimpleBackdrop from "../Elements/Backdrop";
 import CustomizedSnackbars from "../Elements/SnackBar";
 import * as motion from "motion/react-client";
+import { ThemeContext } from "@emotion/react";
+import { useState } from "react";
+import { ModeContext, useMode } from "../../context/modeContext";
 
 const AuthLayout = (props) => {
   const { children, type } = props;
   const { msg, setMsg, open, setOpen, isLoading, setIsLoading } = useContext(NotifContext);
+
+  const { mode, toggleMode } = useMode();
   
   return (
-    <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
+    <div className={`flex justify-center min-h-screen items-center ${mode ? 'dark-mode' : 'light-mode'}`}>
       {isLoading && <SimpleBackdrop isLoading={isLoading} setIsLoading={setIsLoading} />}
       {msg && (
         <CustomizedSnackbars
@@ -151,10 +156,16 @@ const AuthLayout = (props) => {
             </Link>
           </div>
         )}
+        <div style={{ marginTop: "20px", textAlign: "center" }}>
+          <button onClick={toggleMode}>
+            Switch to {mode ? "Light" : "Dark"} Mode
+          </button>
+        </div>
         {/* link end */}
       </motion.div>
       {/* container end */}
     </div>
+
   );
 };
 

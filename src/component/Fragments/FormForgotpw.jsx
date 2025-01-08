@@ -1,6 +1,7 @@
 import LabeledInput from "../Elements/LabeledInput";
 import Button from "../Elements/Button";
 const FormForgotpw = () => {
+  
   return (
     <form action="">
       {/* Teks Forgot Password? */}
