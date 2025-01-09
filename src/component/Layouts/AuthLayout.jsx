@@ -10,6 +10,7 @@ import * as motion from "motion/react-client";
 import { ThemeContext } from "@emotion/react";
 import { useState } from "react";
 import { ModeContext, useMode } from "../../context/modeContext";
+import { Icon } from "../Elements/Icon";
 
 const AuthLayout = (props) => {
   const { children, type } = props;
@@ -158,7 +159,7 @@ const AuthLayout = (props) => {
         )}
         <div style={{ marginTop: "20px", textAlign: "center" }}>
           <button onClick={toggleMode}>
-            Switch to {mode ? "Light" : "Dark"} Mode
+            {mode ? <Icon.LightMode/> : <Icon.DarkMode/> }
           </button>
         </div>
         {/* link end */}

@@ -9,6 +9,9 @@ const CardGoal = () => {
     const [goals, setGoals] = useState({ presentAmount: 0, targetAmount: 0 });
     const [error, setError] = useState(null);
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(true);
+    const chartValue = (goals.presentAmount * 100) / goals.targetAmount;
+    const value = (goals.presentAmount * 100) / goals.targetAmount;
 
     const getData = async () => {
         try {
@@ -22,10 +25,9 @@ const CardGoal = () => {
                 }
             );
 
-            const { present_amount, target_amount } = response.data.data[0];
             setGoals({
-                presentAmount: present_amount,
-                targetAmount: target_amount,
+                presentAmount: response.data.data[0].present_amount,
+                targetAmount: response.data.data[0].target_amount,
             });
         } catch (error) {
             if (error.response) {
@@ -45,6 +47,8 @@ const CardGoal = () => {
                     console.log(error.response);
                 }
             }
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -52,13 +56,25 @@ const CardGoal = () => {
         getData();
     }, []);
 
-    const progressValue = (goals.presentAmount * 100) / goals.targetAmount || 0;
+    if (isLoading) {
+        return (
+          <Card
+            title="Goals"
+            desc={
+              <div className="flex justify-center items-center h-full">
+                <div className="loader animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-primary"></div>
+              </div>
+            }
+          />
+        );
+      }
+    
+      if (!goals) {
+        return <Card title="Goals" desc={<p className="text-center text-red-500">Failed to load data.</p>} />;
+      }
 
     // Log for debugging
-    useEffect(() => {
-        console.log("Goals Updated:", goals);
-        console.log("Progress Value:", progressValue);
-    }, [goals]);
+    
 
     const formattedDate = new Date().toLocaleString("default", {
         month: "short",
@@ -97,7 +113,7 @@ const CardGoal = () => {
                             />
                         </div>
                         <div className="ms-4 text-center">
-                            <CompositionExample key={progressValue} desc={progressValue} />
+                            <CompositionExample desc={chartValue} />
                             <div className="flex justify-between">
                                 <span className="text-gray-03">$0</span>
                                 <span className="font-bold text-2xl">10K</span>
